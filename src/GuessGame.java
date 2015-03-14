@@ -32,6 +32,7 @@ public class GuessGame {
 	public String makeGuess() 
 	{
 		Random randomGenerator = new Random();
+		String tempGuess = new String(_currentGuess);
 		int digitIndex;
 
 		_currentGuess="";
@@ -42,6 +43,9 @@ public class GuessGame {
 			{
 				digitIndex=randomGenerator.nextInt( _possibleDigits.length() ); //add a random number from the possible digits
 				_currentGuess+=_possibleDigits.charAt(digitIndex);
+			} else
+			{
+				_currentGuess+=tempGuess.charAt(pos); //add the same number guessed
 			}
 		}
 		return new String(_currentGuess);

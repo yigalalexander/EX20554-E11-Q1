@@ -8,7 +8,7 @@ public class MainGame {
 	public static void main(String[] args) {
 
 
-		String lastGuess, lastFeedback; //string for a guess and user feedback
+		String lastFeedback; //string for a guess and user feedback
 		
 		int userChoice;
 
@@ -16,7 +16,7 @@ public class MainGame {
 			GuessGame game = new GuessGame(); //init a game object
 			
 			do {
-				lastGuess=game.makeGuess(); //make a new guess
+				game.makeGuess(); //make a new guess
 				// show the guess
 				lastFeedback=JOptionPane.showInputDialog(null, "I guessed "+game.getGuess()+". How did I do?");// as for user feedback
 				game.setFeedback(lastFeedback);
