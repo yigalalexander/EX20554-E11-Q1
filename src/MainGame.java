@@ -9,11 +9,12 @@ public class MainGame {
 
 
 		String lastGuess, lastFeedback; //string for a guess and user feedback
-		GuessGame game = new GuessGame(); //init a game object
+		
 		int userChoice;
 
 		do { //Main game loop
-
+			GuessGame game = new GuessGame(); //init a game object
+			
 			do {
 				lastGuess=game.makeGuess(); //make a new guess
 				// show the guess
